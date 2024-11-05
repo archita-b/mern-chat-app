@@ -22,7 +22,9 @@ const Messages = () => {
         messages.length > 0 &&
         messages.map((message) => {
           return (
-            <Message key={message._id} message={message} ref={lastMessageRef} />
+            <div key={message._id} ref={lastMessageRef}>
+              <Message message={message} />
+            </div>
           );
         })}
 
