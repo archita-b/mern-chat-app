@@ -21,7 +21,9 @@ const Messages = () => {
       {!loading &&
         messages.length > 0 &&
         messages.map((message) => {
-          return <Message key={message._id} message={message} />;
+          return (
+            <Message key={message._id} message={message} ref={lastMessageRef} />
+          );
         })}
 
       {!loading && messages.length === 0 && (
